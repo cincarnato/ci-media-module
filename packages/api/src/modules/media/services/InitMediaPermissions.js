@@ -7,7 +7,7 @@ import {
 
 import {InitService} from "@ci-user-module/api";
 
-export const initMediaPermissions = async function () {
+const initMediaPermissions = async function () {
     let permissions = [
         FILE_SHOW,
         FILE_CREATE,
@@ -16,3 +16,6 @@ export const initMediaPermissions = async function () {
     await InitService.initPermissions(permissions)
     console.log("Load custom permissions done.")
 }
+
+export {initMediaPermissions}
+export default initMediaPermissions

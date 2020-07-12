@@ -24,3 +24,24 @@ Error: Unknown type "Permissions". Did you mean "Permission" or "Session"?
     at Function.Module._load (internal/modules/cjs/loader.js:901:14)
     at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
     at internal/main/run_main_module.js:18:47 
+2020-07-12T14:27:57.106Z error uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1309:16)
+    at listenInCluster (net.js:1357:12)
+    at Server.listen (net.js:1445:7)
+    at Function.listen (/home/cincarnato/code/core/ci-media-module/packages/api/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/cincarnato/code/core/ci-media-module/packages/api/src/index.js:62:5)
+    at Module._compile (internal/modules/cjs/loader.js:1158:30)
+    at Module._compile (/home/cincarnato/code/core/ci-media-module/packages/api/node_modules/pirates/lib/index.js:99:24)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
+    at Object.newLoader [as .js] (/home/cincarnato/code/core/ci-media-module/packages/api/node_modules/pirates/lib/index.js:104:7)
+    at Module.load (internal/modules/cjs/loader.js:1002:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at Object.<anonymous> (/home/cincarnato/code/core/ci-media-module/packages/api/node_modules/@babel/node/lib/_babel-node.js:180:21)
+    at Module._compile (internal/modules/cjs/loader.js:1158:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
+    at Module.load (internal/modules/cjs/loader.js:1002:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at internal/main/run_main_module.js:18:47 

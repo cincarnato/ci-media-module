@@ -60,7 +60,7 @@ apolloServer.applyMiddleware({
 
 app.use('/media/avatar', _express.default.static('media/avatar'));
 app.use('/media/logo', _express.default.static('media/logo'));
-app.use('/media/export', _express.default.static('media/export'));
+app.use('/media/files', _express.default.static('media/files'));
 app.use('/', _express.default.static('web', {
   index: "index.html"
 }));

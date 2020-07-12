@@ -107,3 +107,4 @@
 2020-06-29T03:19:45.296Z error GQLERROR USER:anonymous OP:register CODE: BAD_USER_INPUT  MSG: User validation failed: username: validation.unique, email: validation.unique 
 2020-06-29T03:28:46.116Z error GQLERROR USER:cincarnato OP: CODE: BAD_USER_INPUT  MSG: auth.wrongPassword 
 2020-06-29T03:34:33.910Z error GQLERROR USER:cincarnato OP: CODE: BAD_USER_INPUT  MSG: auth.wrongPassword 
+2020-07-12T14:27:57.108Z error GQLERROR USER:undefined OP:undefined CODE: undefined  MSG: undefined 

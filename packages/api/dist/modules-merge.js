@@ -13,9 +13,11 @@ var _api2 = require("@ci-custom-module/api");
 
 var _graphql = require("./modules/base/graphql");
 
+var _graphql2 = require("./modules/media/graphql");
+
 //BASE RESOLVERS
 //BASE TYPEDEFS
-const resolvers = (0, _mergeGraphqlSchemas.mergeResolvers)([_graphql.resolvers, _api.securityResolvers, _api2.resolvers]);
+const resolvers = (0, _mergeGraphqlSchemas.mergeResolvers)([_graphql.resolvers, _api.securityResolvers, _api2.resolvers, _graphql2.resolvers]);
 exports.resolvers = resolvers;
-const typeDefs = (0, _mergeGraphqlSchemas.mergeTypes)([_graphql.types, _api.securityTypes, _api2.types]);
+const typeDefs = (0, _mergeGraphqlSchemas.mergeTypes)([_graphql.types, _api.securityTypes, _api2.types, _graphql2.types]);
 exports.typeDefs = typeDefs;

@@ -20,7 +20,6 @@
                         <v-combobox
                                 prepend-icon="loyalty"
                                 v-model="form.tags"
-                                :items="items"
                                 :label="$t('media.file.tags')"
                                 multiple
                                 chips
