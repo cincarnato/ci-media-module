@@ -2,6 +2,7 @@
   "name": "@ci-media-module/frontend",
   "version": "1.0.0",
   "private": true,
+  "main": "./src/index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
