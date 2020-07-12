@@ -1,4 +1,4 @@
-# scaffold
+# ci-media-module
 
 ## Project setup
 ```
