@@ -1,6 +1,6 @@
 {
   "name": "@ci-media-module/api",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "main": "lib/export.js",
   "scripts": {
