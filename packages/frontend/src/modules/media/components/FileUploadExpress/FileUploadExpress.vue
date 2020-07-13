@@ -52,7 +52,8 @@
         name: "FileUploadExpress",
         components: {FileView, ToolbarDialog},
         props: {
-            autoSubmit: {type: Boolean, default: false}
+            autoSubmit: {type: Boolean, default: false},
+            accept: {type: String, default: '*'}
         },
         data() {
             return {
@@ -90,7 +91,6 @@
                     }
                 },
                 loading: false,
-                accept: '*'
             }
         },
         computed: {
