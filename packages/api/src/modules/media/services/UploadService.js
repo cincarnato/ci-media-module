@@ -32,7 +32,8 @@ const fileUpload = function (user, inputFile) {
         const hash = '-' + randomString(6)
         const finalFileName = name + hash + extension
         const year = new Date().getFullYear().toString()
-        const relativePath = path.join("media", "files", user.username, year, finalFileName)
+        const month = (new Date().getMonth() + 1).toString()
+        const relativePath = path.join("media", "files", user.username, year,month, finalFileName)
         const absolutePath = path.resolve(relativePath);
 
         //Store

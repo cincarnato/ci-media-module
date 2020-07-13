@@ -132,7 +132,7 @@
                 }
             },
             upload() {
-                if (this.file) {
+                if (this.file && this.state != UPLOADED) {
                     this.loading = true
                     uploadProvider.uploadFile(this.file).then(result => {
                         this.state = UPLOADED
