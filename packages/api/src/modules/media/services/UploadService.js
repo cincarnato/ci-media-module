@@ -24,9 +24,6 @@ const fileUpload = function (user, inputFile) {
 
         const {filename, mimetype, encoding, createReadStream} = await inputFile;
 
-        console.log('mimetype', mimetype)
-        console.log('encoding', encoding)
-
         let type = mimetype.split("/")[0]
 
         const parseFileName = path.parse(filename);
