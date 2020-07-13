@@ -3,6 +3,7 @@
   "version": "1.0.4",
   "author": "Cristian Incarnato",
   "main": "./src/index.js",
+  "license": "ISC",
   "scripts": {
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",

@@ -1,8 +1,8 @@
 {
   "name": "@ci-media-module/api",
   "version": "1.0.3",
-  "description": "",
-  "main": "lib/export.js",
+  "author": "Cristian Incarnato",
+  "main": "./lib/exports.js",
   "scripts": {
     "start": "BABEL_DISABLE_CACHE=1 nodemon src/index.js --exec babel-node -e js",
     "init": "BABEL_DISABLE_CACHE=1 babel-node  src/scripts/init.js",
@@ -20,7 +20,6 @@
     "server",
     "express"
   ],
-  "author": "Cristian Incarnato",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/skeleton-metal/apollo-server-express/issues"
