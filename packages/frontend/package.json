@@ -1,6 +1,6 @@
 {
   "name": "@ci-media-module/frontend",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "author": "Cristian Incarnato",
   "main": "./src/index.js",
   "scripts": {
