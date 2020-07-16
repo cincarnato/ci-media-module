@@ -54,11 +54,11 @@ const fileUpload = function (user, inputFile) {
                 absolutePath: absolutePath,
                 size: storeResult.bytesWritten,
                 url: url,
-                createdBy: user.id
+                createdBy: {user: user.id, username: user.username}
             }, function (err, doc) {
                 if (err) return rejects(err);
                 // saved!
-                doc.populate('createdBy').execPopulate(() => (resolve(doc)))
+                doc.populate('createdBy.user').execPopulate(() => (resolve(doc)))
             });
 
         } else {

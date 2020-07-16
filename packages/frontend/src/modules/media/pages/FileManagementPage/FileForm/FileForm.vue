@@ -12,7 +12,6 @@
                                 :error="hasInputErrors('description')"
                                 :error-messages="getInputErrors('description')"
                                 color="secondary"
-                                :rules="required"
                         ></v-text-field>
                     </v-col>
 

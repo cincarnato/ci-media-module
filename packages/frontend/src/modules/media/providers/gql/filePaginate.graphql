@@ -16,8 +16,11 @@ query filePaginate( $pageNumber: Int, $itemsPerPage:Int, $search: String, $order
             url
             createdAt
             createdBy{
-                id
-                name
+                user{
+                    id
+                    name
+                    username
+                }
                 username
             }
         }

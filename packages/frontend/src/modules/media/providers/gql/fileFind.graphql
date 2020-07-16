@@ -13,8 +13,11 @@ query fileFind($id:ID!){
         url
         createdAt
         createdBy{
-            id
-            name
+            user{
+                id
+                name
+                username
+            }
             username
         }
     }

@@ -3,7 +3,7 @@ import {UserInputError} from 'apollo-server-express'
 
 export const findFile = async function (id) {
     return new Promise((resolve, reject) => {
-        File.findOne({_id: id}).populate('createdBy').exec((err, res) => (
+        File.findOne({_id: id}).populate('createdBy.user').exec((err, res) => (
             err ? reject(err) : resolve(res)
         ));
     })
@@ -11,7 +11,7 @@ export const findFile = async function (id) {
 
 export const fetchFiles = async function () {
     return new Promise((resolve, reject) => {
-        File.find({}).isDeleted(false).populate('createdBy').exec((err, res) => (
+        File.find({}).isDeleted(false).populate('createdBy.user').exec((err, res) => (
             err ? reject(err) : resolve(res)
         ));
     })
@@ -24,7 +24,7 @@ export const paginateFiles = function ( pageNumber = 1, itemsPerPage = 5, search
         if (search) {
             qs = {
                 $or: [
-                    
+                    {filename: {$regex: search, $options: 'i'}},
                 ]
             }
         }
@@ -41,7 +41,7 @@ export const paginateFiles = function ( pageNumber = 1, itemsPerPage = 5, search
 
 
     let query = {deleted: false, ...qs(search)}
-    let populate = ['createdBy']
+    let populate = ['createdBy.user']
     let sort = getSort(orderBy, orderDesc)
     let params = {page: pageNumber, limit: itemsPerPage, populate, sort}
 
@@ -70,7 +70,7 @@ export const updateFile = async function (authUser, id, {description, tags}) {
                 rejects(error)
             } 
         
-            doc.populate('createdBy').execPopulate(() => resolve(doc))
+            doc.populate('createdBy.user').execPopulate(() => resolve(doc))
         })
     })
 }

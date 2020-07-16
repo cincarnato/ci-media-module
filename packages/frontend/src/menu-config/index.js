@@ -14,6 +14,12 @@ export default [
         panel: false,
     },
     {
+        icon: 'dashboard',
+        text: i18n.t('media.file.dashboardTitle'),
+        link: {name: "FileDashboardPage"},
+        panel: false,
+    },
+    {
         icon: 'person',
         text: 'Administrador',
         panel: false,

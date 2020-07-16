@@ -13,10 +13,13 @@ mutation fileUpdate($id: ID!, $description:String, $tags:[String]){
         url
         createdAt
         createdBy{
+            user{
                 id
                 name
                 username
             }
+            username
+        }
     }
 }
 

@@ -3,6 +3,7 @@ const messages = {
         media: {
             file: {
                 title: 'File management',
+                dashboardTitle: "File Dashboard",
                 subtitle: 'View, search, create, edit and delete File',
                 creating: 'Creating File',
                 editing: 'Editing File',
@@ -27,12 +28,13 @@ const messages = {
     es: {
         media: {
             file: {
-                title: 'Administración de File',
-                subtitle: 'Ver, buscar, crear, editar, y borrar File',
-                creating: 'Creando File',
-                editing: 'Modificando File',
-                deleting: 'Eliminando File',
-                showing: 'Detalles de File',
+                title: 'Administración de Archivos',
+                dashboardTitle: "Dashboard de Archivos",
+                subtitle: 'Ver, buscar, crear, editar, y borrar Archivo',
+                creating: 'Creando archivo',
+                editing: 'Modificando archivo',
+                deleting: 'Eliminando archivo',
+                showing: 'Detalles de archivo',
                 filename: 'Nombre del archivo',
                 description: 'Descripción',
                 tags: 'Etiquetas',
@@ -53,6 +55,7 @@ const messages = {
         media: {
             file: {
                 title: 'Administração de File',
+                dashboardTitle: "File Dashboard",
                 subtitle: 'Ver, buscar, criar, editar e usar File',
                 creating: 'Criando File',
                 editing: 'Edição File',

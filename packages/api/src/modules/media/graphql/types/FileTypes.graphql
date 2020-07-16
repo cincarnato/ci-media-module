@@ -8,10 +8,15 @@ type File{
     extension: String!
     relativePath: String!
     absolutePath: String!
-    size: String!
+    size: Int!
     url: String!
     createdAt: String!
-    createdBy: User
+    createdBy: CreatedBy
+}
+
+type CreatedBy{
+    user: User
+    username: String
 }
 
 type FilePaginated{
@@ -24,8 +29,6 @@ type Query {
     fileFind(id:ID!): File
     fileFetch: [File]
     filePaginate( pageNumber: Int, itemsPerPage: Int, search: String, orderBy: String, orderDesc: Boolean): FilePaginated
-
-
 }
 
 input FileInput{
@@ -33,7 +36,7 @@ input FileInput{
     extension: String!
     relativePath: String!
     absolutePath: String!
-    size: String!
+    size: Int!
     url: String!
     createdAt: String!
 }
