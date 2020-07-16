@@ -21,6 +21,8 @@ import FileList from './modules/media/pages/FileManagementPage/FileList'
 import FileShow from './modules/media/pages/FileManagementPage/FileShow'
 import FileUpdate from './modules/media/pages/FileManagementPage/FileUpdate'
 
+import FileDashboardPage from './modules/media/pages/FileDashboardPage'
+
 export {
     i18nMessages,
     routes,
@@ -42,6 +44,8 @@ export {
     FileForm,
     FileList,
     FileShow,
-    FileUpdate
+    FileUpdate,
+
+    FileDashboardPage
 
 }
