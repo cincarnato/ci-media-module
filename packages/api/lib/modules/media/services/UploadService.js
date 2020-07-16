@@ -33,6 +33,7 @@ const baseUrl = function () {
 
 const fileUpload = function (user, inputFile) {
   return new Promise(async (resolve, rejects) => {
+    console.log("inputFile", inputFile);
     const {
       filename,
       mimetype,
@@ -48,8 +49,9 @@ const fileUpload = function (user, inputFile) {
     const hash = '-' + (0, _randomString.default)(6);
     const finalFileName = name + hash + extension;
     const year = new Date().getFullYear().toString();
+    const month = (new Date().getMonth() + 1).toString();
 
-    const relativePath = _path.default.join("media", "files", user.username, year, finalFileName);
+    const relativePath = _path.default.join("media", "files", user.username, year, month, finalFileName);
 
     const absolutePath = _path.default.resolve(relativePath); //Store
 

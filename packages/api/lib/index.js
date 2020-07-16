@@ -14,6 +14,8 @@ var _api = require("@ci-user-module/api");
 
 var _logger = require("./logger");
 
+var _FileRouter = require("./modules/media/rest/routers/FileRouter");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 require('dotenv').config();
@@ -25,6 +27,7 @@ app.use(_api.jwtMiddleware);
 app.use(_api.rbacMiddleware);
 app.use(_logger.expressRequestLogger);
 app.use(_api.sessionMiddleware);
+app.use('/api', _FileRouter.router);
 _apolloServerExpress.GraphQLExtension.didEncounterErrors;
 const apolloServer = new _apolloServerExpress.ApolloServer({
   typeDefs: _modulesMerge.typeDefs,
@@ -71,4 +74,4 @@ app.get('*', function (request, response) {
 app.get('/status', function (req, res) {
   res.send("RUNNING");
 });
-app.listen(process.env.APP_PORT, () => console.log(`Server started :). URL: http://localhost:${process.env.APP_PORT}${apolloServer.graphqlPath}`));
+app.listen(process.env.APP_PORT, () => console.log(`Server started: http://localhost:${process.env.APP_PORT}`));

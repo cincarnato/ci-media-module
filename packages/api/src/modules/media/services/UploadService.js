@@ -22,6 +22,7 @@ const fileUpload = function (user, inputFile) {
 
     return new Promise(async (resolve, rejects) => {
 
+        console.log("inputFile",inputFile)
         const {filename, mimetype, encoding, createReadStream} = await inputFile;
 
         let type = mimetype.split("/")[0]

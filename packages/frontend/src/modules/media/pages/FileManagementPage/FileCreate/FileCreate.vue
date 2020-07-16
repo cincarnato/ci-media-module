@@ -52,7 +52,7 @@
             },
             fileUploaded(){
                 this.$emit('itemCreated')
-                this.$emit('close')
+             //   this.$emit('close')
             }
 
         },

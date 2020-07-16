@@ -10,9 +10,9 @@
     "build": "vue-cli-service build --dest ../api/dist/web --mode production"
   },
   "dependencies": {
-    "@ci-common-module/frontend": "^1.0.13",
+    "@ci-common-module/frontend": "^1.0.15",
     "@ci-custom-module/frontend": "^1.0.6",
-    "@ci-user-module/frontend": "^1.0.50",
+    "@ci-user-module/frontend": "^1.0.62",
     "apollo-cache-inmemory": "^1.6.6",
     "apollo-client": "^2.6.10",
     "apollo-link": "^1.2.14",

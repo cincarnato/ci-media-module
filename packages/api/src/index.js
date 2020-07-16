@@ -5,8 +5,8 @@ import {ApolloServer, GraphQLExtension} from 'apollo-server-express'
 import {resolvers, typeDefs} from './modules-merge'
 import path from 'path'
 import {jwtMiddleware, corsMiddleware, rbacMiddleware, sessionMiddleware} from '@ci-user-module/api'
-
 import {expressRequestLogger, graphqlErrorLogger, graphqlResponseLogger} from './logger'
+import {router as fileRouter} from './modules/media/rest/routers/FileRouter'
 
 const app = express();
 
@@ -17,6 +17,7 @@ app.use(rbacMiddleware)
 app.use(expressRequestLogger)
 app.use(sessionMiddleware)
 
+app.use('/api', fileRouter)
 
 GraphQLExtension.didEncounterErrors
 
@@ -33,7 +34,7 @@ const apolloServer = new ApolloServer({
                     didEncounterErrors(requestContext) {
                         graphqlErrorLogger(requestContext)
                     },
-                    willSendResponse(requestContext){
+                    willSendResponse(requestContext) {
                         graphqlResponseLogger(requestContext)
                     }
                 }
@@ -43,20 +44,21 @@ const apolloServer = new ApolloServer({
 });
 
 
-
 apolloServer.applyMiddleware({app})
 
 //STATIC IMG
 app.use('/media/avatar', express.static('media/avatar'));
 app.use('/media/logo', express.static('media/logo'));
 app.use('/media/files', express.static('media/files'));
-app.use('/', express.static('web',{index: "index.html"}));
+app.use('/', express.static('web', {index: "index.html"}));
 
 app.get('*', function (request, response) {
     response.sendFile(path.resolve(__dirname, 'web/index.html'));
 });
 
 //status
-app.get('/status', function(req,res){res.send("RUNNING")})
+app.get('/status', function (req, res) {
+    res.send("RUNNING")
+})
 
-app.listen(process.env.APP_PORT, () => console.log(`Server started :). URL: http://localhost:${process.env.APP_PORT}${apolloServer.graphqlPath}`))
+app.listen(process.env.APP_PORT, () => console.log(`Server started: http://localhost:${process.env.APP_PORT}`))

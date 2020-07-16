@@ -8,7 +8,9 @@ const createDirIfNotExist = function (dst) {
   let dir = path.dirname(dst);
 
   if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir);
+    fs.mkdirSync(dir, {
+      recursive: true
+    });
   }
 };
 
