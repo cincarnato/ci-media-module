@@ -29,7 +29,7 @@
     "@ci-custom-module/api": "^1.0.10",
     "@ci-user-module/api": "^1.0.64",
     "apollo-server-express": "^2.12.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "csv-parser": "^2.3.2",
     "dotenv": "^8.1.0",
