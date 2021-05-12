@@ -52,7 +52,7 @@
     "mongoose-unique-validator": "^2.0.3",
     "multer": "^1.4.2",
     "node-device-detector": "^1.2.1",
-    "nodemailer": "^6.3.1",
+    "nodemailer": "^6.4.16",
     "nodemailer-pug-engine": "^1.0.1",
     "saslprep": "^1.0.3",
     "streamifier": "^0.1.1",
